@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="pytranslation",  
+    name="py_test_tools",  
     version="0.0.1",  # 包版本号
     author="zhhony",  # 作者
     author_email="zhhony@126.com",  # 联系方式
