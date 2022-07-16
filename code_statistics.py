@@ -32,7 +32,14 @@ def getFileSet(path: str, fileTypeList: list, ignoreFileList: list, ignorePathLi
     return fileSet
 
 
-def CodeStatistics(path, fileTypeList, ignoreFileList, ignorePathList):
+def CodeStatistics(path, fileTypeList: list, ignoreFileList: list, ignorePathList: list) -> pd.DataFrame:
+    '''本方法可以用来在给出指定路径下面，解析出指定类型文件的行数和字符数。本方法需要pandas环境，请提前安装。
+    path:路径；
+    fileTypeList：文件类型清单，可以把需要解析的文件对应的类型放入列表，方法会基于列表寻找文件。范例：fileTypeList = ['.py','.json']；
+    ignoreFileList：需要排除的文件清单。如果存在不需要统计的文件，可以用这个参数指定。范例：['abc.py','123.json']
+    ignorePathList：需要排除的路径清单。
+
+    '''
     content = []
 
     PathDirsPYFiles = getFileSet(
